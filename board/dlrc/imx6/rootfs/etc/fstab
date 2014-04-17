@@ -1,0 +1,15 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount pt>     <type>	<options>         <dump> <pass>
+/dev/root       /              ext2	rw,noauto         0      1
+proc		/proc	       proc     defaults	  0	 0
+devpts		/dev/pts       devpts   defaults,gid=5,mode=620	  0	 0
+tmpfs           /dev/shm       tmpfs    mode=0777         0      0
+tmpfs           /tmp           tmpfs    mode=1777         0      0
+sysfs		/sys	       sysfs    defaults	  0	 0
+
+#mount overlay
+/dev/mmcblk0p3		/overlay		ext3	defaults	0	0
+
+# mount ex-sdcard
+/dev/mmcblk0p4		/mnt/ex-sdcard	vfat	defaults	0	0
